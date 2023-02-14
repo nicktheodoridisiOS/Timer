@@ -75,6 +75,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		692A084B299C05D5006F8632 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		6936475A2997F4B900E7E8A1 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +105,7 @@
 		693647652997F4B900E7E8A1 /* Timer */ = {
 			isa = PBXGroup;
 			children = (
+				692A084B299C05D5006F8632 /* Fonts */,
 				693647912999870800E7E8A1 /* ViewModel */,
 				69364790299986FD00E7E8A1 /* View */,
 				693647662997F4B900E7E8A1 /* TimerApp.swift */,
