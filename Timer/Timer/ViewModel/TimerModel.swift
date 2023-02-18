@@ -42,7 +42,7 @@ class TimerModel: NSObject , ObservableObject , UNUserNotificationCenterDelegate
     }
     
     func startTimer(){
-        withAnimation(.easeIn(duration: 0.25)){isStarted = true}
+        withAnimation(.easeInOut(duration: 0.25)){isStarted = true}
         timerStringValue = "\(hours == 0 ? "" :  "\(hours):")\(minutes >= 10 ? "\(minutes)":"0\(minutes)"):\(seconds >= 10 ? "\(seconds)":"0\(seconds)")"
         
         totalSeconds = (hours * 3600) + (minutes * 60) + seconds
@@ -87,7 +87,7 @@ class TimerModel: NSObject , ObservableObject , UNUserNotificationCenterDelegate
     func addNotification(){
         let content  = UNMutableNotificationContent()
         content.title = "Timer"
-        content.subtitle = "Time is up"
+        content.subtitle = "Time is up!"
         content.sound = UNNotificationSound.default
         
         let  request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(staticTotalSeconds), repeats:false))

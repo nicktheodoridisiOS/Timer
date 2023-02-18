@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		692A8DBD299CD175008AFD27 /* TerminaTest-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 692A8DBB299CD175008AFD27 /* TerminaTest-Thin.otf */; };
+		692A8DBE299CD175008AFD27 /* TerminaTest-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 692A8DBC299CD175008AFD27 /* TerminaTest-Regular.otf */; };
 		693647672997F4B900E7E8A1 /* TimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693647662997F4B900E7E8A1 /* TimerApp.swift */; };
 		693647692997F4B900E7E8A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693647682997F4B900E7E8A1 /* ContentView.swift */; };
 		6936476B2997F4BA00E7E8A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6936476A2997F4BA00E7E8A1 /* Assets.xcassets */; };
@@ -16,6 +18,7 @@
 		693647842997F4BA00E7E8A1 /* TimerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693647832997F4BA00E7E8A1 /* TimerUITestsLaunchTests.swift */; };
 		693647932999871E00E7E8A1 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693647922999871E00E7E8A1 /* TimerModel.swift */; };
 		693647952999879100E7E8A1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693647942999879100E7E8A1 /* Home.swift */; };
+		697B884B299CC787003681F1 /* ButtonPressAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697B884A299CC787003681F1 /* ButtonPressAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		692A8DBB299CD175008AFD27 /* TerminaTest-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TerminaTest-Thin.otf"; path = "../../../../../../Downloads/Termina Test/TerminaTest-Thin.otf"; sourceTree = "<group>"; };
+		692A8DBC299CD175008AFD27 /* TerminaTest-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TerminaTest-Regular.otf"; path = "../../../../../../Downloads/Termina Test/TerminaTest-Regular.otf"; sourceTree = "<group>"; };
+		692A8DBF299CD2A9008AFD27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		693647632997F4B900E7E8A1 /* Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		693647662997F4B900E7E8A1 /* TimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerApp.swift; sourceTree = "<group>"; };
 		693647682997F4B900E7E8A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +54,7 @@
 		693647832997F4BA00E7E8A1 /* TimerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		693647922999871E00E7E8A1 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
 		693647942999879100E7E8A1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		697B884A299CC787003681F1 /* ButtonPressAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPressAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +85,8 @@
 		692A084B299C05D5006F8632 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				692A8DBC299CD175008AFD27 /* TerminaTest-Regular.otf */,
+				692A8DBB299CD175008AFD27 /* TerminaTest-Thin.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -105,6 +114,7 @@
 		693647652997F4B900E7E8A1 /* Timer */ = {
 			isa = PBXGroup;
 			children = (
+				692A8DBF299CD2A9008AFD27 /* Info.plist */,
 				692A084B299C05D5006F8632 /* Fonts */,
 				693647912999870800E7E8A1 /* ViewModel */,
 				69364790299986FD00E7E8A1 /* View */,
@@ -112,6 +122,7 @@
 				693647682997F4B900E7E8A1 /* ContentView.swift */,
 				6936476A2997F4BA00E7E8A1 /* Assets.xcassets */,
 				6936476C2997F4BA00E7E8A1 /* Preview Content */,
+				697B884A299CC787003681F1 /* ButtonPressAction.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -262,7 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6936476E2997F4BA00E7E8A1 /* Preview Assets.xcassets in Resources */,
+				692A8DBE299CD175008AFD27 /* TerminaTest-Regular.otf in Resources */,
 				6936476B2997F4BA00E7E8A1 /* Assets.xcassets in Resources */,
+				692A8DBD299CD175008AFD27 /* TerminaTest-Thin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				693647932999871E00E7E8A1 /* TimerModel.swift in Sources */,
+				697B884B299CC787003681F1 /* ButtonPressAction.swift in Sources */,
 				693647692997F4B900E7E8A1 /* ContentView.swift in Sources */,
 				693647952999879100E7E8A1 /* Home.swift in Sources */,
 				693647672997F4B900E7E8A1 /* TimerApp.swift in Sources */,
@@ -451,6 +465,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Timer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Timer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -479,6 +494,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Timer/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Timer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

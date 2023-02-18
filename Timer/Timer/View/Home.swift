@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Home: View {
     @EnvironmentObject var timerModel: TimerModel
+    
+    @State private var isPressed = false
 
     var body: some View {
         VStack{
@@ -20,6 +22,7 @@ struct Home: View {
                         Circle()
                             .trim(from: 0 ,to: timerModel.progress)
                             .stroke(Color("Orange"),lineWidth: 2)
+                            .animation(.spring(), value: timerModel.progress)
                         
                         
                         GeometryReader{ proxy in
@@ -31,9 +34,12 @@ struct Home: View {
                                 .frame(width: size.width , height: size.height,alignment: .center)
                                 .offset(x: size.height/2)
                                 .rotationEffect(.init(degrees: timerModel.progress * 360))
+                                .animation(.spring(), value: timerModel.progress)
                         }
                         
-                        Text(timerModel.timerStringValue).font(.system(size: 45,weight: .ultraLight)).rotationEffect(.init(degrees: 90))
+                        Text(timerModel.timerStringValue)
+                            .font(.custom("TerminaTest-Thin", size: 40))
+                            .rotationEffect(.init(degrees: 90))
                             .animation(.none, value: timerModel.progress)
                     }
                     .padding(82)
@@ -52,12 +58,21 @@ struct Home: View {
                         }label: {
                             Circle().frame(width: 40,height: 40).padding(4).foregroundColor(!timerModel.isStarted ? Color("Orange"): Color("DarkGray"))
                                 
-                        }
+                        }.scaleEffect(isPressed ? -0.1: 1.0)
                     }.background{
                         Circle().stroke(!timerModel.isStarted ? Color("Orange"): Color("DarkGray"),lineWidth: 2)
                     }
                     
                 }.frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .center)
+                    .pressEvents{
+                        withAnimation(.easeIn(duration: 0.2)){
+                            isPressed = true
+                        }
+                    }onRelease: {
+                        withAnimation{
+                            isPressed = false
+                        }
+                    }
                 
             }
         }
@@ -100,76 +115,100 @@ struct Home: View {
         
     @ViewBuilder
     func NewTimerView() ->some View  {
-        VStack(spacing: 15){
+        VStack(spacing: 20){
             Text("Add New Timer")
-                .font(.title.bold())
+                .font(.custom("TerminaTest-Regular", size:16))
                 .foregroundColor(.white)
                 .padding(.top,10)
-            
-            HStack(spacing: 15){
-                Text("Hours")
-                Text("Minutes")
-                Text("Seconds")
+         
+            HStack(spacing: 12){
+                VStack(alignment: .center){
+                    Text("hr").font(.custom("TerminaTest-Regular", size:16))
+                    HStack{
+                        Text("\(timerModel.hours)")
+                            .font(.custom("TerminaTest-Thin", size: 24))
+                            .foregroundColor(.white).padding(.horizontal,20).padding(.vertical,12)
+                            .background{
+                                if timerModel.hours == 0
+                                {
+                                    Circle().stroke( Color("DarkGray") ,lineWidth: 2).frame(width: 50,height: 50)
+                                }
+                                else{
+                                    Circle().stroke( Color("Orange") ,lineWidth: 2).frame(width: 50,height: 50)
+                                }
+                            }
+                            .contextMenu{
+                                ContexMenuOptions(maxValue: 12){ value in
+                                    timerModel.hours = value
+                                }
+                            }
+
+                        
+                    }
+                   
+                }
+                
+                VStack(alignment: .center){
+                    Text("min").font(.custom("TerminaTest-Regular", size:16))
+                    HStack{
+                        Text("\(timerModel.minutes)")
+                            .font(.custom("TerminaTest-Thin",size: 24))
+                            .foregroundColor(.white).padding(.horizontal,20).padding(.vertical,12)
+                            .background{
+                                if timerModel.minutes == 0
+                                {
+                                    Circle().stroke( Color("DarkGray") ,lineWidth: 2).frame(width: 50,height: 50)
+                                }
+                                else{
+                                    Circle().stroke( Color("Orange") ,lineWidth: 2).frame(width: 50,height: 50)
+                                }
+                            }
+                            .contextMenu{
+                                ContexMenuOptions(maxValue: 60){ value in
+                                    timerModel.minutes = value
+                                }
+                            }
+                    }
+                    
+                }
+                
+                VStack(alignment: .center){
+                    Text("sec").font(.custom("TerminaTest-Regular", size:16))
+                    Text("\(timerModel.seconds)")
+                        .font(.custom("TerminaTest-Thin", size: 24))
+                        .foregroundColor(.white).padding(.horizontal,20).padding(.vertical,12)
+                        .background{
+                            if timerModel.seconds == 0
+                            {
+                                Circle().stroke( Color("DarkGray") ,lineWidth: 2).frame(width: 50,height: 50)
+                            }
+                            else{
+                                Circle().stroke( Color("Orange") ,lineWidth: 2).frame(width: 50,height: 50)
+                            }
+                        }
+                        .contextMenu{
+                            ContexMenuOptions(maxValue: 60){ value in
+                                timerModel.seconds = value
+                            }
+                        }
+                }
             }
-            
-            HStack(spacing: 15){
-                
-                Text("\(timerModel.hours)")
-                    .font(.system(size: 24,weight: .ultraLight))
-                    .foregroundColor(.white).padding(.horizontal,20).padding(.vertical,12)
-                    .background{
-                        Circle().stroke( Color("Orange") ,lineWidth: 2).frame(width: 50,height: 50)
-                    }
-                    .contextMenu{
-                        ContexMenuOptions(maxValue: 12){ value in
-                            timerModel.hours = value
-                        }
-                    }
-                
-                
-                Text("\(timerModel.minutes)")
-                    .font(.system(size: 24,weight: .ultraLight))
-                    .foregroundColor(.white).padding(.horizontal,20).padding(.vertical,12)
-                    .background{
-                        Circle().stroke( Color("Orange") ,lineWidth: 2).frame(width: 50,height: 50)
-                    }
-                    .contextMenu{
-                        ContexMenuOptions(maxValue: 60){ value in
-                            timerModel.minutes = value
-                        }
-                    }
-                
-                
-                Text("\(timerModel.seconds)")
-                    .font(.system(size: 24,weight: .ultraLight))
-                    .foregroundColor(.white).padding(.horizontal,20).padding(.vertical,12)
-                    .background{
-                        Circle().stroke( Color("Orange") ,lineWidth: 2).frame(width: 50,height: 50)
-                    }
-                    .contextMenu{
-                        ContexMenuOptions(maxValue: 60){ value in
-                            timerModel.seconds = value
-                        }
-                    }
-                
-            }
-            .padding(.top,12)
+            .padding(.top,10).padding(.bottom,10)
             
             Button{
                 timerModel.startTimer()
             }label: {
                 Text("Save")
-                    .font(.system(size: 15,weight: .ultraLight))
+                    .font(.custom("TerminaTest-Regular", size:15))
                     .foregroundColor(.white)
                     .padding(.vertical)
                     .padding(.horizontal,100)
                     .background{
-                        Capsule().fill(Color("Orange")).frame(width: 157,height: 37)
+                        Capsule().fill(Color("Orange")).frame(width: 107,height: 33)
                     }
             }
             .disabled(timerModel.seconds == 0)
             .opacity(timerModel.seconds == 0  ? 0.5 : 1)
-            .padding(.top)
         }
         .padding()
         .frame(maxWidth: .infinity)
