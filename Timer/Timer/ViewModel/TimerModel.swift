@@ -87,7 +87,7 @@ class TimerModel: NSObject , ObservableObject , UNUserNotificationCenterDelegate
     func addNotification(){
         let content  = UNMutableNotificationContent()
         content.title = "Timer"
-        content.subtitle = "Time is up!"
+        content.subtitle = "Time is over!"
         content.sound = UNNotificationSound.default
         
         let  request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(staticTotalSeconds), repeats:false))

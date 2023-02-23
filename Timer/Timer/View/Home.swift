@@ -101,7 +101,7 @@ struct Home: View {
                 timerModel.updateTimer()
             }
         }
-        .alert("Time is up",isPresented: $timerModel.isFinished){
+        .alert("Time is over!",isPresented: $timerModel.isFinished){
             Button("Start New",role: .cancel){
                 timerModel.stopTimer()
                 timerModel.addNewTimer = true
