@@ -26,5 +26,5 @@ iPhone 14 Pro device.
 
 ### <b>Design Presentation</b>
 [Behance](https://www.behance.net/gallery/164498319/Timer) </br>
-[Dribble](https://dribbble.com/shots/20808353-Timer-Mobile-Application?added_first_shot=true)
+[Dribbble](https://dribbble.com/shots/20808353-Timer-Mobile-Application?added_first_shot=true)
 
