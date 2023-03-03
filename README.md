@@ -1,6 +1,6 @@
 # ⏱️ Timer Application
 
-Timer application with swift programming language, using SwiftUI framework on
+Timer application with Swift programming language, using SwiftUI framework on
 iPhone 14 Pro device.
 
 ### <b>Built with</b>
@@ -22,9 +22,9 @@ iPhone 14 Pro device.
 ### <b>Run the project</b>
 
 🔗 Run the project
-[here](https://www.instagram.com/reel/Co13D6lg3gu/)
+[here](https://www.instagram.com/p/CpUcl2mAcaj/)
 
-### <b>App Presentaion</b>
+### <b>Design Presentaion</b>
+[Behance](https://www.behance.net/gallery/164498319/Timer) </br>
+[Dribble](https://dribbble.com/shots/20808353-Timer-Mobile-Application?added_first_shot=true)
 
-🔗 Check the complete presentation
-[here](https://www.instagram.com/reel/Co13D6lg3gu/)
