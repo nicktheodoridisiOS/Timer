@@ -11,7 +11,6 @@ iPhone 14 Pro device.
 ### <b>Designed with</b>
 
 ![Figma](https://img.shields.io/badge/Figma-F24E1E.svg?style=for-the-badge&logo=Figma&logoColor=white)
-![Photoshop](https://img.shields.io/badge/Photoshop-31A8FF.svg?style=for-the-badge&logo=AdobePhotoshop&logoColor=white)
 
 
 ### <b>Screenshots</b>
@@ -25,6 +24,5 @@ iPhone 14 Pro device.
 [here](https://www.instagram.com/p/CpUcl2mAcaj/)
 
 ### <b>Design Presentation</b>
-[Behance](https://www.behance.net/gallery/164498319/Timer) </br>
-[Dribbble](https://dribbble.com/shots/20808353-Timer-Mobile-Application?added_first_shot=true)
+[Figma](https://www.figma.com/community/file/1240010813363690477/Timer-Mobile-Application)
 
