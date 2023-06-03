@@ -1,24 +1,19 @@
-# ⏱️ Timer Application
-
-Timer application with Swift programming language, using SwiftUI.
-
-### <b>Built with</b>
-
-![SwiftUI](https://img.shields.io/badge/SwiftUI-019BE5.svg?style=for-the-badge&logo=swift&logoColor=white)
-![xCode](https://img.shields.io/badge/Xcode-147EFB.svg?style=for-the-badge&logo=XCode&logoColor=white)
-
-### <b>Designed with</b>
-
-![Figma](https://img.shields.io/badge/Figma-F24E1E.svg?style=for-the-badge&logo=Figma&logoColor=white)
+# Timer Mobile Application
 
 
-### <b>Screenshots</b>
+## About Application
+Timer is a mobile application which follows the MVVM architecture. This application built in Xcode using Swift programming language and SwiftUI framework. In this application you can set the time you want and the application automatically counts down until it covers the time entered by the user.
 
-<img src="screenshot1.png" width = "175px" hspace="20">   <img src="screenshot2.png" width = "175px" hspace="20">   <img src="screenshot3.png" width = "175px" hspace="20">
+## Screenshots
 
+<img src="screenshot1.png" width = "175px">   <img src="screenshot2.png" width = "175px" hspace="5">   <img src="screenshot3.png" width = "175px" hspace="5">
 
-### <b>Run the project</b>
+## Run The Application
 
-🔗 Run the project
-[here](https://www.instagram.com/p/CpUcl2mAcaj/)
+<a href="https://www.instagram.com/p/CpUcl2mAcaj/" target="_blank">Here</a>
+
+## Find Me Also On
+<a href="https://www.instagram.com/nickmadethisone/" target="_blank">Instagram</a> <br>
+<a href="https://www.linkedin.com/in/nick-theodoridis-75097a266/" target="_blank">LinkedIn</a> <br>
+<a href="https://twitter.com/nickiOSDev" target="_blank">Twitter</a>
 
